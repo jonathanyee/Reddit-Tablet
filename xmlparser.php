@@ -19,21 +19,11 @@ class Reddit
 $request_url = "http://www.reddit.com/.xml"; 
 $xml = simplexml_load_file($request_url) or die("feed not loading");
 
-$thisPage = [];
+$thisPage = array();
 
 foreach($xml->channel->item as $item)
 {
-	/*
-	echo "<div class=\"item\">";
-	echo "<a href=" .$item->link. ">" .$item->title. "</a>";
-	echo "<p>" .$item->pubDate. "</p>";
-	echo "<p>" .$item->description. "</p>";
-	echo "</div>";
-	*/
-
-	$reddit =& new Reddit($item->title, $item->link, 
-								$item->pubDate, $item->description);
-
+	$reddit =& new Reddit($item->title, $item->link, $item->pubDate, $item->description);
 	array_push($thisPage, $reddit);
 }
 
@@ -75,7 +65,7 @@ foreach($xml->channel->item as $item)
 		<?php
 			foreach($thisPage as $i)
 			{
-				echo "<section>" .$thisPage[$i]->title;
+				echo "<section>" .$i->title;
 				echo "</section>";
 			}
 		?>
