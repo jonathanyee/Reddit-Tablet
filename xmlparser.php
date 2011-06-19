@@ -21,6 +21,7 @@ $xml = simplexml_load_file($request_url) or die("feed not loading");
 
 $thisPage = array();
 
+//create reddit object
 foreach($xml->channel->item as $item)
 {
 	$reddit =& new Reddit($item->title, $item->link, $item->pubDate, $item->description);
@@ -63,13 +64,37 @@ foreach($xml->channel->item as $item)
 
 	<div id="posts">
 		<?php
+			$counter = 1;
+			
 			foreach($thisPage as $i)
 			{
-				echo "<section>" .$i->title;
+				echo "<section>";
+				echo "<a href=\"#post-" .$counter++. "\">" .$i->title. "</a>";
 				echo "</section>";
+				echo "\n\n";
+			}
+		?>
+	</div>
+	
+	<div id="content">
+		<?php
+			$counter = 1;
+			
+			foreach($thisPage as $i)
+			{
+				echo "<div id=\"#post-" .$counter++. "\">";
+				echo "<a href=\"" .$i->link. "\">" .$i->title. "</a>";
+				echo "<p>" .$i->description. "</p>";
+				echo "</section>";
+				echo "\n\n";
 			}
 		?>
 	</div>
 
+<script src="activatables.js" type="text/javascript"></script>
+<script type="text/javascript">
+activatables('post', ['post-1', 'post-2', 'post-3']);
+</script>
+	
 </body>
 </html>
