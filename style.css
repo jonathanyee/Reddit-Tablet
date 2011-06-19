@@ -1,0 +1,97 @@
+html 
+{
+	background-color: transparent;
+	overflow-y: auto;
+}
+
+body
+{
+	background: #eee;
+	overflow-x: hidden;
+}
+
+a:link, a:visited
+{
+	color: #222;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #aaa;
+}
+
+#navigation, #posts
+{
+	border-right: 1px solid #aaa;
+	position: absolute;
+	overflow: auto;
+	width: 20%;
+	top: 1px;
+	bottom: 1px;
+}
+
+#navigation
+{
+	left: 0;
+}
+
+#posts
+{
+	left: 20%;
+}
+
+/* NAVIGATION */
+#navigation ul 
+{
+	list-style: none;
+	padding: 0;
+}
+
+#navigation li a
+{
+	display: block;
+	padding: 10px 0 10px 10px;
+}
+
+.active
+{
+	background-color: #bbb;
+}
+
+/* SECTION */
+#posts section
+{
+	border-bottom: 1px solid #aaa;
+}
+
+#posts section p
+{
+	margin: 5px;
+}
+
+
+::-webkit-scrollbar 
+{
+	width: 8px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  
+{
+	height: 5px;
+	display: block;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece  {
+	-webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: #ccc;
+	border: 1px solid #eee;
+	-webkit-border-radius: 6px;
+}
