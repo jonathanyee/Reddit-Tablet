@@ -82,10 +82,10 @@ foreach($xml->channel->item as $item)
 			
 			foreach($thisPage as $i)
 			{
-				echo "<div id=\"#post-" .$counter++. "\">";
+				echo "<div id=\"post-" .$counter++. "\">";
 				echo "<a href=\"" .$i->link. "\">" .$i->title. "</a>";
 				echo "<p>" .$i->description. "</p>";
-				echo "</section>";
+				echo "</div>";
 				echo "\n\n";
 			}
 		?>
@@ -93,7 +93,11 @@ foreach($xml->channel->item as $item)
 
 <script src="activatables.js" type="text/javascript"></script>
 <script type="text/javascript">
-activatables('post', ['post-1', 'post-2', 'post-3']);
+activatables('post', ['post-1', 'post-2', 'post-3', 'post-4', 'post-5', 
+'post-6', 'post-7', 'post-8', 'post-9', 'post-10', 'post-11', 'post-12', 
+'post-13', 'post-14', 'post-15', 'post-16', 'post-17', 'post-18', 
+'post-19', 'post-20', 'post-21', 'post-22', 'post-23', 'post-24', 
+'post-25', 'post-26', 'post-27']);
 </script>
 	
 </body>
