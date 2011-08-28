@@ -9,4 +9,5 @@ using HTML/CSS/JS.
 TODO
 ----
 1. Get comments
-2. Inline image or video
+2. Make viewing different subreddits work
+3. Inline image or video
