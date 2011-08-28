@@ -1,174 +1,174 @@
 html 
 {
-	background-color: transparent;
-	overflow-y: auto;
+   background-color: transparent;
+   overflow-y: auto;
 }
 
 body
 {
-	background: #eee;
-	overflow-x: hidden;
+   background: #eee;
+   overflow-x: hidden;
 }
 
 a:link, a:visited
 {
-	color: #222;
-	text-decoration: none;
+   color: #222;
+   text-decoration: none;
 }
 
 a:hover
 {
-	color: #aaa;
+   color: #aaa;
 }
 
 #navigation, #posts
 {
-	border-right: 1px solid #aaa;
-	bottom: 1px;
-	overflow: auto;
-	position: absolute;
-	top: 1px;
-	width: 20%;
+   border-right: 1px solid #aaa;
+   bottom: 1px;
+   overflow: auto;
+   position: absolute;
+   top: 1px;
+   width: 20%;
 }
 
 #navigation
 {
-	left: 0;
+   left: 0;
 }
 
 #posts
 {
-	left: 20%;
+   left: 20%;
 }
 
 /* NAVIGATION */
 #navigation ul 
 {
-	list-style: none;
-	padding: 0;
+   list-style: none;
+   padding: 0;
 }
 
 #navigation li a
 {
-	display: block;
-	padding: 10px 0 10px 10px;
+   display: block;
+   padding: 10px 0 10px 10px;
 }
 
 .active
 {
-	background-color: #bbb;
+   background-color: #bbb;
 }
 
 /* SECTION */
 #posts section
 {
-	border-bottom: 1px solid #aaa;
-	margin: 5px;
+   border-bottom: 1px solid #aaa;
+   margin: 5px;
 }
 
 #posts section a:link, #posts section a:visited
 {
-	display: block;
-	padding: 5px;
+   display: block;
+   padding: 5px;
 }
 
 #posts section a:hover
 {
-	background-color: #ddd;
-	color: #000;
+   background-color: #ddd;
+   color: #000;
 }
 
 #posts section p
 {
-	margin: 5px;
+   margin: 5px;
 }
 
 /* CONTENT */
 #content
 {
-	bottom: 1px;
-	margin: 10px 0 0 20px;
-	left: 40%;
-	overflow: auto;
-	position: absolute;
-	top: 1px;
-	width: 58%;
+   bottom: 1px;
+   margin: 10px 0 0 20px;
+   left: 40%;
+   overflow: auto;
+   position: absolute;
+   top: 1px;
+   width: 58%;
 }
 
 #content a:link, #content a:visited
 {
-	color: blue;
+   color: blue;
 }
 
 /* COMMENTS */
 .comment 
 {
-	border-left:1px solid #000;
-	padding:10px;
+   border-left:1px solid #000;
+   padding:10px;
 }
 
 .depth-1 
 {
-	margin-left:30px;
+   margin-left:30px;
 }
 
 .depth-2 
 {
-	margin-left:60px;
+   margin-left:60px;
 }
 
 .depth-3 
 {
-	margin-left:90px;
+   margin-left:90px;
 }
 
 .depth-4 
 {
-	margin-left:120px;
+   margin-left:120px;
 }
 
 .depth-5 
 {
-	margin-left:150px;
+   margin-left:150px;
 }
 
 .depth-6 
 {
-	margin-left:180px;
+   margin-left:180px;
 }
 
 .depth-7 
 {
-	margin-left:210px;
+   margin-left:210px;
 }
 
 /* SCROLLBAR */
 ::-webkit-scrollbar 
 {
-	width: 8px;
-	height: 10px;
+   width: 8px;
+   height: 10px;
 }
 
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment  
 {
-	height: 5px;
-	display: block;
-	background-color: transparent;
+   height: 5px;
+   display: block;
+   background-color: transparent;
 }
 
 ::-webkit-scrollbar-track-piece  {
-	-webkit-border-radius: 6px;
+   -webkit-border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-	height: 50px;
-	background-color: #ccc;
-	border: 1px solid #eee;
-	-webkit-border-radius: 6px;
+   height: 50px;
+   background-color: #ccc;
+   border: 1px solid #eee;
+   -webkit-border-radius: 6px;
 }
 
 .inactive 
 {
-	display: none;
+   display: none;
 }
