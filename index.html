@@ -1,103 +1,46 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head>
-	<title>Reddit Tablet</title>
-	<link rel="stylesheet" href="style.css" />
-	
+   <title>Reddit Tablet</title>
+   <link rel="stylesheet" href="style.css" />
+  
    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-  	<script src="activatables.js" type="text/javascript"></script>
-   
-   <script type="text/javascript">
+   <script src="activatables.js" type="text/javascript"></script>
+   <script type="text/javascript" src="application.js"></script>
 
-		var listOfItems = [];
-		
-		$(document).ready(function() {
-
-			$.getJSON(
-				"http://www.reddit.com/.json?jsonp=?",
-		      function foo(data)
-		      {
-		      	$.each(
-						data.data.children,
-		            function (i, post) {
-
-							var item = {
-						               title: post.data.title,
-						               link: post.data.url,
-						               ups: post.data.ups,
-											downs: post.data.downs,
-											permalink: post.data.permalink
-							};
-
-						   listOfItems.push(item);
-						}
-					)
-
-					//posts
-					 for (var i = 1; i <= listOfItems.length; i++) {
-					    $("#posts").append('<section>' +
-						                    '<a href="#post=post-' + i + '">' + listOfItems[i-1].title + '</a>' +
-						                    '</section>'
-					                        );
-					 }
-
-					 //content
-					 for (var i = 1; i <= listOfItems.length; i++) {
-					    $("#content").append('<div id="post-' + i + '">' +
-					                        '<a href="' + listOfItems[i-1].link + '">' + listOfItems[i-1].title + '</a>' +
-													'<p>Up: ' + listOfItems[i-1].ups + '<br />' +
-													'Down: ' + listOfItems[i-1].downs + '</p>' +
-					                        '</div>'
-					                        );
-					 }
-					
-					var list = [];
-					for (var i = 1; i <= listOfItems.length; i++) {
-						list.push('post-' + i);
-					}
-					
-					 activatables('post', list);
-				}	
-			);
-			
-			
-			
-		});
-		
-   </script>
 </head>
 <body>
 
-	<div id="navigation">
-		<ul>
-			<h2>Reddit</h2>
-			<li><a href="#">Front page</a></li>
-			<li><a href="#">Messages</a></li>
-			<h3>Subscriptions</h3>
-			<li class="active"><a href="#">Ask Reddit</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Funny</a></li>
-			<li><a href="#">Gaming</a></li>
-			<li><a href="#">Pics</a></li>
-			<li><a href="#">Programming</a></li>
-			<li><a href="#">Starcraft</a></li>
-			<li><a href="#">WTF</a></li>
-			<li><a href="#">Ask Reddit</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Funny</a></li>
-			<li><a href="#">Gaming</a></li>
-			<li><a href="#">Pics</a></li>
-			<li><a href="#">Programming</a></li>
-			<li><a href="#">Starcraft</a></li>
-			<li><a href="#">WTF</a></li>
-		</ul>
-	</div>
+   <div id="navigation">
+      <ul>
+         <h2>Reddit</h2>
+         <li><a href="#">Front page</a></li>
+         <li><a href="#">Messages</a></li>
+         <h3>Subscriptions</h3>
+         <li class="active"><a href="#">Ask Reddit</a></li>
+         <li><a href="#">Blog</a></li>
+         <li><a href="#">Funny</a></li>
+         <li><a href="#">Gaming</a></li>
+         <li><a href="#">Pics</a></li>
+         <li><a href="#">Programming</a></li>
+         <li><a href="#">Starcraft</a></li>
+         <li><a href="#">WTF</a></li>
+         <li><a href="#">Ask Reddit</a></li>
+         <li><a href="#">Blog</a></li>
+         <li><a href="#">Funny</a></li>
+         <li><a href="#">Gaming</a></li>
+         <li><a href="#">Pics</a></li>
+         <li><a href="#">Programming</a></li>
+         <li><a href="#">Starcraft</a></li>
+         <li><a href="#">WTF</a></li>
+      </ul>
+   </div>
 
-	<div id="posts">
-	</div>
+   <div id="posts">
+   </div>
 	
-	<div id="content">	   
-	</div>
+   <div id="content">	   
+   </div>
 	
 </body>
 </html>
