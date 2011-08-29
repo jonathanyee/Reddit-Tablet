@@ -5,8 +5,14 @@
    <link rel="stylesheet" href="style.css" />
   
    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-   <script src="activatables.js" type="text/javascript"></script>
    <script type="text/javascript" src="application.js"></script>
+   
+   <script type="text/javascript">
+      $("a.link").live("click", function()
+      {
+         getThread($(this).attr("title"));
+      });
+   </script>
 
 </head>
 <body>
@@ -17,22 +23,22 @@
          <li><a href="#">Front page</a></li>
          <li><a href="#">Messages</a></li>
          <h3>Subscriptions</h3>
-         <li class="active"><a href="#">Ask Reddit</a></li>
-         <li><a href="#">Blog</a></li>
-         <li><a href="#">Funny</a></li>
-         <li><a href="#">Gaming</a></li>
-         <li><a href="#">Pics</a></li>
-         <li><a href="#">Programming</a></li>
-         <li><a href="#">Starcraft</a></li>
-         <li><a href="#">WTF</a></li>
-         <li><a href="#">Ask Reddit</a></li>
-         <li><a href="#">Blog</a></li>
-         <li><a href="#">Funny</a></li>
-         <li><a href="#">Gaming</a></li>
-         <li><a href="#">Pics</a></li>
-         <li><a href="#">Programming</a></li>
-         <li><a href="#">Starcraft</a></li>
-         <li><a href="#">WTF</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/AskReddit")>Ask Reddit</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/blog")>Blog</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/funny")>Funny</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/gaming/")>Gaming</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/pics")>Pics</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/programming")>Programming</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/starcraft")>Starcraft</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/wtf")>WTF</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/AskReddit")>Ask Reddit</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/blog")>Blog</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/funny")>Funny</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/gaming/")>Gaming</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/pics")>Pics</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/programming")>Programming</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/starcraft")>Starcraft</a></li>
+         <li><a href="#" onclick=getSubRedditLinks("http://www.reddit.com/r/wtf")>WTF</a></li>
       </ul>
    </div>
 

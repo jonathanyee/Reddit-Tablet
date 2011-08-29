@@ -8,6 +8,6 @@ using HTML/CSS/JS.
 
 TODO
 ----
-1. Get comments
-2. Make viewing different subreddits work
+1. <strike>Get comments</strike>
+2. <strike>Make viewing different subreddits work</strike>
 3. Inline image or video
